@@ -11,7 +11,8 @@
         "sim.js",
         "nude.js",
         "nudegirl.js",
-        "nhentai.js"
+        "nhentai.js",
+        "bot.js"
     ],
     "eventDisabled": [
         "join.js"
