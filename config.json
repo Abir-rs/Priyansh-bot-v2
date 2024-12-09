@@ -73,7 +73,7 @@
     },
     "rankup": {
         "autoUnsend": true,
-        "unsendMessageAfter": 10
+        "unsendMessageAfter": 5
     },
     "rname": {
         "APIKEY": "mi451266190"
