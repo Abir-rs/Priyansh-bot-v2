@@ -3,8 +3,8 @@
     "keyActive": "",
     "DeveloperMode": true,
     "autoCreateDB": true,
-    "notiGroup": true,
-    "NOTIFICATION": true,
+    "notiGroup": false,
+    "NOTIFICATION": false,
     "allowInbox": true,
     "autoClean": true,
     "commandDisabled": [
@@ -12,7 +12,8 @@
         "nude.js",
         "nudegirl.js",
         "nhentai.js",
-        "bot.js"
+        "bot.js",
+        "autoseen.js"
     ],
     "eventDisabled": [
         "join.js"
