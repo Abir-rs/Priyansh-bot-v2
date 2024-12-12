@@ -18,7 +18,7 @@ module.exports.onLoad = function () {
     const path = join(__dirname, "cache", "joinvideo");
     if (existsSync(path)) mkdirSync(path, { recursive: true }); 
  
-    const path2 = join(__dirname, "cache", "joinvideo", "randomgif");
+    const path2 = join(__dirname, "cache", "joinvideo", "welc.gif");
     if (!existsSync(path2)) mkdirSync(path2, { recursive: true });
  
     return;
@@ -44,7 +44,7 @@ ____________________________________
 Abir কে নক করতে পারেন 
 👉FB link: https://www.facebook.com/100078140834638
 -
-`, attachment: fs.createReadStream(__dirname + "/cache/joinmp4/emon1.mp4")} ,threadID));
+`, attachment: fs.createReadStream(__dirname + "")} ,threadID));
 	}
 	else {
 		try {
@@ -65,7 +65,7 @@ Abir কে নক করতে পারেন
 			}
 			memLength.sort((a, b) => a - b);
 			
-			(typeof threadData.customJoin == "undefined") ? msg = "আসসালামু আলাইকুম🌺 🥀༊🤗😻🤗 {name}  😍.\n\n🌸༊🥀۞Wellcome-!!-🌻🥀 To {threadName}\n{type} You are the {soThanhVien} member of this group🌻.\n\n𝄞❤️⋆⃝⑅⑅⃝•BOT OWNER♥🖤Abdulla Rahaman and EMon-BHai❤️😇Never Try To Spam Here🚫\n\n 『Abdulla Rahaman♥ EMon-BHai 』\n\n🥰 Follow Our Group Rules✅\n\n🤖 Hi I'm CYBER-CAT bot messenger use help to see command 🤖." : msg = threadData.customJoin;
+			(typeof threadData.customJoin == "undefined") ? msg = "আসসালামু আলাইকুম🌺 🥀༊🤗😻🤗 {name}  😍.\n\n🌸༊🥀۞Wellcome-!!-🌻🥀 To {threadName}\n{type} You are the {soThanhVien} member of this group🌻.\n\n❤️😇Never Try To Spam Here🚫\n🤖 Hi I'm CYBER-CAT bot messenger use help to see command 🤖." : msg = threadData.customJoin;
 			msg = msg
 			.replace(/\{name}/g, nameArray.join(', '))
 			.replace(/\{type}/g, (memLength.length > 1) ?  'You' : 'Friend')
@@ -74,7 +74,7 @@ Abir কে নক করতে পারেন
 
 			if (existsSync(path)) mkdirSync(path, { recursive: true });
 
-			const randomPath = readdirSync(join(__dirname, "cache", "joinGif", "randomgif"));
+			const randomPath = readdirSync(join(__dirname, "cache", "joinGif", "welc.gif"));
 
 			if (existsSync(pathGif)) formPush = { body: msg, attachment: createReadStream(pathGif), mentions }
 			else if (randomPath.length != 0) {
