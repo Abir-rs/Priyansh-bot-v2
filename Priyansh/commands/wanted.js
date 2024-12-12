@@ -4,8 +4,8 @@ module.exports.config = {
 	hasPermssion: 0,
 	credits: "",
 	description: "",
-	commandCategory: "edit-img",
-	usages: "wanted",
+	commandCategory: "wanted frame for fun purpose",
+	usages: "{pn}wanted @tag @tag",
 	cooldowns: 5,
 	dependencies: {"fs-extra": "","discord.js": "","discord-image-generation" :"","node-superfetch": ""}
 };
