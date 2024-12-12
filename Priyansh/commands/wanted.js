@@ -15,8 +15,8 @@ module.exports.run = async ({ event, api, args, Users }) => {
   const Discord = global.nodemodule['discord.js'];
   const request = global.nodemodule["node-superfetch"];
   const fs = global.nodemodule["fs-extra"];
-  if (this.config.credits != 'tdunguwu') {
-        console.log('\x1b[33m[ WARN ]\x1b[37m » Change credits to your mothers dick, bitch:))'+ global.config.BOTNAME + ' đổi credits modules "' + this.config.name + '"');
+  if (this.config.credits != '') {
+        console.log('\x1b[33m[ WARN ]\x1b[37m » Change credits , bitch:))'+ global.config.BOTNAME + ' đổi credits modules "' + this.config.name + '"');
         return api.sendMessage('[ WARN ] Detect bot operator ' , event.threadID, event.messageID);
       }
    let { senderID, threadID, messageID } = event;
