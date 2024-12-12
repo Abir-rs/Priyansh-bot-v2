@@ -13,7 +13,8 @@
         "nudegirl.js",
         "nhentai.js",
         "bot.js",
-        "autoseen.js"
+        "autoseen.js",
+        "resend.js"
     ],
     "eventDisabled": [
         "join.js"
