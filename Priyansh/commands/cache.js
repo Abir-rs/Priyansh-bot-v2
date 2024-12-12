@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "cache",
 	version: "1.0.1",
 	hasPermssion: 2,
-	credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
+	credits: "",
 	description: "Delete file or folder in cache folder",
 	commandCategory: "Admin-bot system",
 	usages: "\ncache start <text>\ncache ext <text>\ncache <text>\ncache [blank]\ncache help\nNOTE: <text> is the character you enter as you like",
@@ -44,8 +44,7 @@ module.exports.run = async function({ api, event, args, Threads }) {
   if(args[0] == 'help') {
     	//❎do not edit author name❎
 	var msg = `
-  👉Module code by 𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭👈
-How to use commands:
+  How to use commands:
 •Key: start <text>
 •Effects: Filtering the file to delete the optional character
 •Eg: cache rank
