@@ -48,7 +48,7 @@ module.exports.config = {
 module.exports.run = async function({ api, args, Users, event, Threads, utils, client }) {
 	let {messageID, threadID, senderID} = event;
 	var info = await api.getThreadInfo(threadID);
-	if (!info.adminIDs.some(item => item.id == api.getCurrentUserID())) return api.sendMessage('The bot needs group admin rights to use this command\nPlease add and try again!', threadID, messageID);
+	//if (!info.adminIDs.some(item => item.id == api.getCurrentUserID())) return api.sendMessage('The bot needs group admin rights to use this command\nPlease add and try again!', threadID, messageID);
 	var fs = require("fs-extra");
 	
 	if (!fs.existsSync(__dirname + `/cache/bans.json`)) {
