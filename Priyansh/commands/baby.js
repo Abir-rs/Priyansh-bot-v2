@@ -1,9 +1,3 @@
-const axios = require('axios');
-const baseApiUrl = async () => {
-  const base = await axios.get('https://raw.githubusercontent.com/Blankid018/D1PT0/main/baseApiUrl.json');
-  return base.data.api;
-};
-
 module.exports.config = {
   name: "bby",
   aliases: ["baby", "bbe", "babe"],
@@ -19,6 +13,11 @@ module.exports.config = {
 };
 
 module.exports.onStart = async ({ api, event, args, usersData }) => {
+  const axios = require('axios');
+  const baseApiUrl = async () => {
+  const base = await axios.get('https://raw.githubusercontent.com/Blankid018/D1PT0/main/baseApiUrl.json');
+  return base.data.api;
+};
   const link = `${await baseApiUrl()}/baby`;
   const dipto = args.join(" ").toLowerCase();
   const uid = event.senderID;
