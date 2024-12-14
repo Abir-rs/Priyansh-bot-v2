@@ -16,13 +16,20 @@ module.exports.languages = {
 		"missingReply": "Hãy reply tin nhắn cần gỡ."
 	},
 	"en": {
-			syntaxError: "Please reply the message you want to unsend"
-		}
-	},
+		"returnCant": "Cannot unsend other users' messages.",
+		"missingReply": "Please reply to the bot's message you want to unsend."
+	}
+};
 
-	onStart: async function ({ message, event, api, getLang }) {
-		if (!event.messageReply || event.messageReply.senderID != api.getCurrentUserID())
-			return message.reply(getLang("syntaxError"));
-		message.unsend(event.messageReply.messageID);
+module.exports.onStart = async function ({ message, event, api, getLang }) {
+	// Check if the message is a reply and if the bot sent the original message
+	if (!event.messageReply || event.messageReply.senderID != api.getCurrentUserID()) {
+		return message.reply(getLang("missingReply"));  // Return an error message if not
+	}
+	// Proceed to unsend the bot's message
+	try {
+		await api.unsendMessage(event.messageReply.messageID);
+	} catch (error) {
+		message.reply(getLang("returnCant"));  // Error handling
 	}
 };
